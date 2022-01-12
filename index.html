@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="style.css">
     <style>
@@ -27,7 +30,7 @@
 
         main {
             display: flex;
-            justify-content: center;
+
             flex-direction: column;
             align-items: center;
 
@@ -36,10 +39,11 @@
 
         .container {
             background-color: #FFFFFF;
-            width: 870px;
+
             padding: 30px;
             margin-top: 21px;
             border-radius: 10px;
+            width: 870px;
         }
 
         .top-player {
@@ -123,6 +127,81 @@
         .blog-author a {
             text-decoration: none;
             font-size: 16px;
+        }
+
+        /*-----------
+        --------- course styles------------------ */
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 24px;
+        }
+
+        .course .course-banner img {
+            width: 224px;
+            height: 104px;
+        }
+
+        .course-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .fa-star.filled {
+            color: #FFC014;
+        }
+
+        .fa-star.empty {
+            color: #AEAEAE;
+        }
+
+        .fa-clock {
+            color: #ED6B4F;
+        }
+
+        .course-duration {
+            background-color: #ed6c4fa6;
+            border-radius: 5px;
+            font-size: 14.6913px;
+        }
+
+        /* ---------media queries----------
+        --------- */
+        /* mobile device */
+        @media only screen and (max-width:688px) {
+
+            .container {
+                width: 100%;
+            }
+
+            .players,
+            .blogs,
+            .courses {
+
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .player,
+            .blog {
+                flex-direction: column;
+            }
+
+
+
+        }
+
+        /* tablet devices */
+        @media only screen and (min-width: 688px) and (max-width:992px) {
+            .container {
+                width: 100%;
+            }
+
+            .players,
+            .courses {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -225,7 +304,93 @@
         <!-- latest courses -->
 
         <section class="container">
-            <h2 class="ssection-title">Latest Courses</h2>
+            <h2 class="section-title">Latest Courses</h2>
+            <div class="courses">
+                <article class="course">
+                    <div class="course-banner">
+                        <img src="images/courses/course-1.png" alt="">
+                    </div>
+                    <div class="course-detail">
+                        <h3 class="course-title">React - The Complete
+                            Guide 2020 </h3>
+                        <p class="course-author">
+                            Reed Krakoff
+                        </p>
+                        <div class="course-info">
+                            <div>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star empty"></i>
+                                <span>4.5</span>
+                            </div>
+
+                            <div class="course-duration">
+                                <i class="far fa-clock"></i>01:30 hr
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="course">
+                    <div class="course-banner">
+                        <img src="images/courses/course-2.png" alt="">
+                    </div>
+                    <div class="course-detail">
+                        <h3 class="course-title">React - The Complete
+                            Guide 2020 </h3>
+                        <p class="course-author">
+                            Reed Krakoff
+                        </p>
+                        <div class="course-info">
+                            <div>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star empty"></i>
+                                <span>4.5</span>
+                            </div>
+
+                            <div class="course-duration">
+                                <i class="far fa-clock"></i>01:30 hr
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+                <article class="course">
+                    <div class="course-banner">
+                        <img src="images/courses/course-3.png" alt="">
+                    </div>
+                    <div class="course-detail">
+                        <h3 class="course-title">React - The Complete
+                            Guide 2020 </h3>
+                        <p class="course-author">
+                            Reed Krakoff
+                        </p>
+                        <div class="course-info">
+                            <div>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star filled"></i>
+                                <i class="fas fa-star empty"></i>
+                                <span>4.5</span>
+                            </div>
+
+                            <div class="course-duration">
+                                <i class="far fa-clock"></i>01:30 hr
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+            </div>
         </section>
     </main>
 
